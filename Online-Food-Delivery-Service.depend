@@ -2,3 +2,12 @@
 1584205420 source:e:\mygithub\online-food-delivery-service\main.cpp
 	<iostream>
 
+1717527283 source:e:\mygithub\online-food-delivery-service\customer.cpp
+	<windows.h>
+	<conio.h>
+	"Customer.h"
+
+1717527848 e:\mygithub\online-food-delivery-service\include\customer.h
+	<iostream>
+	<string>
+
