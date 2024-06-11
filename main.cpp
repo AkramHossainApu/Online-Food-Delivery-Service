@@ -62,6 +62,28 @@ int main() {
                     getline(cin, phoneNumber);
                     customerBST.addCustomer(name, address, phoneNumber);
                     goto ManageCustomer;
+                } else if (customerchoose == '2') {
+                    system("cls");
+                    cout << "__________________________________________-SEARCH CUSTOMER-________________________________________\n\n\n";
+                    string name;
+                    cout << "\n\nEnter name to search: ";
+                    getline(cin, name);
+                    Customer* customer = customerBST.searchCustomer(name);
+                    if (customer) {
+                        cout << "\n\n\t\t\t\t\t  !Customer found! \n\n"
+                             << "\n Name: " << customer->name << endl
+                             << " Address: " << customer->address << endl
+                             << " Phone Number: " << customer->phoneNumber << endl;
+                        cout << "\n\n\t\t\t\t    Press any key to go to main menu ";
+                        getch();
+                        system("cls");
+                    } else {
+                        system("cls");
+                        cout << "\n\n\n\n\n\n\n\n\t\t\t\t\tCustomer not found!" << endl;
+                        Sleep(1000);
+                        system("cls");
+                    }
+                    goto ManageCustomer;
                 }
                 break;
             }

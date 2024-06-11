@@ -17,9 +17,11 @@ class CustomerBST {
 private:
     Customer* root;
     void addCustomer(Customer*& node, string name, string address, string phoneNumber);
+    Customer* searchCustomer(Customer* node, string name);
 public:
     CustomerBST();
     void addCustomer(string name, string address, string phoneNumber);
+    Customer* searchCustomer(string name);
 
 };
 
