@@ -23,3 +23,17 @@ void CustomerBST::addCustomer(string name, string address, string phoneNumber) {
     Sleep(1000);
     system("cls");
 }
+
+Customer* CustomerBST::searchCustomer(Customer* node, string name) {
+    if (node == nullptr || node->name == name) {
+        return node;
+    }
+    if (name < node->name) {
+        return searchCustomer(node->left, name);
+    }
+    return searchCustomer(node->right, name);
+}
+
+Customer* CustomerBST::searchCustomer(string name) {
+    return searchCustomer(root, name);
+}
